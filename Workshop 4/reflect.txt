@@ -1,0 +1,8 @@
+1) - To avoid repetition, so you don't need to write the same expression every time you need to calculate value.
+- To write shorter and cleaner code, it's much easier to change just one line of code where value was assigned to variable then to change 100 lines of code where you manually write down expression.
+- To understand what is value represents, later when you will come back to your code you can forget what is value representing. By assigning understandable name to variable you can make life easier for yourself and people who will edit your code.
+
+
+2) 
+- If we would mix different logic together than it will be much harder to reuse code with time, and if we will need to edit logic we would need to work with big and not understandable block of code.
+- It would make code harder to understand if we would include sum and average calculation in validation process. Better practice is to separate blocks of code that have different logic, so it would be easier to read code.

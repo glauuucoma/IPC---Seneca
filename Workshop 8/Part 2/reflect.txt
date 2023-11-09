@@ -1,0 +1,47 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #8
+Full Name  : Davyd Kuleba
+Student ID#: 147894224
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1)
+BENEFIT: Increased Flexibility, Allowing functions to return values in two different ways (thru an argument and/or by return) provides flexibility for developers to choose the most suitable approach based on their coding style and specific use cases.
+
+NEGATIVE REASON - Code Complexity and Ambiguity: Having multiple ways to return values can increase code complexity, leading to potential errors and making the code harder to read and maintain.
+
+2)
+Function with less than perfect cohesion: "convertLbs"
+
+The "convertLbs" function converts a weight from pounds to kilograms and grams. However, it performs two different operations in a single functions - calculating the conversion to kilograms and grams. These operations are unrelated, they are still two different operations, and combining them into one function reduces the cohesion of the function.
+
+To improve the cohesion of the "convertLbs" function, it should be separated into two different functions, each for one type of conversion: "convertLbsToKilograms" and "convertLbsToGrams".
+
+
+Function with Coupling that Could Be Improved: "calculateReportData"
+
+The "calculateReportData" function calculates various data related to a cat food product and returns a struct ReportData. However, the function heavily relies on other functions such as "convertLbsKg", "convertLbsG", "calculateServings", "calculateCostPerServing", and "calculateCostPerCal" to perform its calculations. This tight coupling with multiple other functions makes the "calculateReportData" function dependent on them.
+
+To improve the coupling of the calculateReportData function:
+
+Dependency Injection: Instead of directly calling the conversion and calculation functions within "calculateReportData", we can pass the required data as arguments to the function. For example, we can pass the weight in pounds and let the calling function calculate the weight in kilograms and grams before passing it to "calculateReportData".
+Break Down Calculations: The calculateReportData function currently performs several different 
+
+3)
+What advantages are there in passing structures to functions? Based on your readings this week (for next week’s topics) what could be done in the passing of this data to functions to make it more efficient? Explain how the “displayCatfoodData” function could be improved.
+
+Advantages of Passing Structures to Functions:
+
+Reduced Parameter List: Passing structures allows encapsulating multiple related data elements into a single parameter, improving code readability.
+
+Improved Readability and Maintainability: Structure-based function calls provide descriptive interfaces, making it easier to understand the purpose of the data being passed.
+
+Modularity and Reusability: Grouping related data and functionality within a structure promotes modularity, reusability, and code sharing across the project.
+
+
+To improve "displayCatFoodData" we can directly pass the struct "CatFoodInfo" as a parameter instead of individual fields. This enhances code readability and eliminates the need to pass each field separately. Additionally, by using the constant qualifier, we ensure the function does not modify the data.

@@ -1,0 +1,41 @@
+/*
+*****************************************************************************
+                        Assignment 1 - Milestone 3
+Full Name  : Davyd Kuleba
+Student ID#: 147894224
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+*/
+
+1. Functions I made, tested, improved:
+
+- int findPatientIndexByPatientNum(int patientNumber, const struct Patient patient[], int max);
+
+-> This tool finds a patient using their special number and figures out where they are in the group. It also makes their phone number look neat. When you use this tool, it asks you for the patient's number, like asking for a secret code. Then, it gives you the patient's details. It also makes sure that the patient's number is real. If the patient is found, it shows their name, phone number, and phone style. But if it can't find the patient, it tells you a message so you understand.
+
+- int timeSlotAvailable(struct Date date, struct Time time, struct Appointment* app, int maxAppointments);
+
+-> The timeSlotAvailable tool quickly checks if a certain time is free among other appointments. It uses clues from the date and time you want, and the list of appointments. The tool looks at each appointment and checks if the time is already taken. It helps to make sure two things don't happen at the same time. Its job is important because it makes sure appointments are well-planned and everyone's time is set. It's like a time detective that keeps everything in order.
+
+- int nextSlotAvailable(struct Appointment* app, int maxAppointments);
+    
+-> The nextSlotAvailable tool is like a guide that finds the next open spot in a game. It looks at all the places where appointments can go. It saves the number of the empty spot so you don't put something where it's not allowed. It looks at each spot and remembers which one is free. This tool is like a helper that looks at the appointments and remembers how much room is left. It's like a guide that knows where there's space, so you can add new things without any problems.That helps to prevent override and potential errors.
+
+2. 
+In the client.c code, I made a purposeful choice to limit the use of the scanf function. This decision was driven by the desire to create a better experience for users and to ensure the program works smoothly.
+Having too many scanf requests can be confusing and make it easier for users to enter wrong information. Instead, we used different functions like inputIntRange and inputCharOption to gather information. These functions not only get the data we need, but also guide users with clear instructions and check if the entered data is correct.
+
+Reducing the scanf usage also makes sure that the program runs well. Each time we use scanf, the program pauses and waits for the user. By using fewer scanf calls, we help the program run more efficiently and quickly.
+Another important reason is to make the code easier to understand and manage. We separated the work of gathering information and checking it into different functions. This makes the code neat and organized, and it's simpler to find and fix any issues later.
+
+In short, minimizing scanf calls was a thoughtful choice to make the program more user-friendly, prevent mistakes, run smoothly, and keep the code neat.
+
+3. 
+I chose to group all the functions together in the clinic.h file because they handle tasks related to appointments and patient information. This arrangement was aimed at simplifying the process of reviewing, enhancing, and comprehending the code holistically. While contemplating my options, I did consider the possibility of creating additional groups. However, the guidelines provided by the assignment limited that approach. Moreover, having too many separate groups could potentially complicate the codebase, making it less intuitive to navigate.
+
+Consequently, I opted for a more direct strategy by consolidating all the relevant functions within a single cohesive group. This deliberate decision was driven by the aim of establishing a clear and organized structure within the codebase. This approach aligns with the fundamental principles of maintaining a codebase that is both easy to understand and manageable. Despite the consideration of using multiple groups, the focus remained resolute on achieving clarity and coherence within the confines of a singular module. This commitment to creating a streamlined and unified structure underscores the dedication to enhancing code readability and overall quality.
+	
