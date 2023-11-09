@@ -3,7 +3,7 @@
 
 <br/>
 
- <h3>Introduction to Programming Using C</h3>
+ <h1>Introduction to Programming Using C</h1>
 <br/>
 
 <h2>Course Overview</h2>
