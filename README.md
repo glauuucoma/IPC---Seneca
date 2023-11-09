@@ -1,7 +1,4 @@
 <!-- ABOUT THE PROJECT -->
-
-<br/>
-
  <h1>Introduction to Programming Using C</h1>
 <br/>
 
